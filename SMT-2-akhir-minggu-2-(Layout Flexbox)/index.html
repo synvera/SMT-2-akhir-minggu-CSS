@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktik 2 - Layout Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      flex: 1;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333333;
+    }
+
+    .card p {
+      color: #666666;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+    
+    <div class="card">
+      <h3>Card 1</h3>
+      <p>Ini adalah konten untuk kartu pertama. Menggunakan Flexbox membuat elemen ini otomatis sejajar menyamping.</p>
+    </div>
+
+    <div class="card">
+      <h3>Card 2</h3>
+      <p>Ini adalah konten untuk kartu kedua. Jarak di antara kartu-kartu ini diatur dengan mudah menggunakan properti gap.</p>
+    </div>
+
+    <div class="card">
+      <h3>Card 3</h3>
+      <p>Ini adalah konten untuk kartu ketiga. Properti flex: 1 memastikan semua kartu memiliki lebar yang presisi dan sama rata.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
