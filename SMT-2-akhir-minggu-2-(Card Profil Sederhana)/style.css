@@ -1,0 +1,59 @@
+        /* Biar card tampil di tengah halaman */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Tampilan utama card */
+        .profile-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 24px;
+            width: 280px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        /* Foto profil */
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 1px solid #000000;
+            margin-bottom: 16px;
+            object-fit: cover;
+        }
+
+        /* Nama pemilik card */
+        .profile-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 0 0 8px 0;
+        }
+
+        /* Penjelasan singkat */
+        .profile-desc {
+            font-size: 0.9rem;
+            color: #666666;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        /* Tombol aksi */
+        .profile-btn {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            cursor: pointer;
+        }
