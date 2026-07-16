@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 3: Mini Layout Website Modern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #000000;
+}
+
+.navbar .nav-logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 2px solid #000000;
+    background-color: #fafafa;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #555555;
+}
+
+.hero-btn {
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 60px 20px;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 25px;
+    border: 2px solid #000000;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid #000000;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">Tugas</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Layout Website Modern</h1>
+            <p>Desain minimalis dengan struktur layout bersih menggunakan Flexbox dan Box Model dasar.</p>
+            <a href="#" class="hero-btn">Pelajari Selengkapnya</a>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <div class="card">
+            <h3>Layanan 1</h3>
+            <p>Penjelasan singkat mengenai konten atau fitur utama pertama yang ditawarkan di website ini.</p>
+        </div>
+        <div class="card">
+            <h3>Layanan 2</h3>
+            <p>Penjelasan singkat mengenai konten atau fitur utama kedua yang ditawarkan di website ini.</p>
+        </div>
+        <div class="card">
+            <h3>Layanan 3</h3>
+            <p>Penjelasan singkat mengenai konten atau fitur utama ketiga yang ditawarkan di website ini.</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Tugas. Hak Cipta Dilindungi.</p>
+    </footer>
+</body>
+</html>
