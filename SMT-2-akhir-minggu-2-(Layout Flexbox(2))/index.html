@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 2 - Layout Flexbox Minimalis Hitam Putih</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-bottom: 1px solid #000000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 71px);
+    padding: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    width: 280px;
+    padding: 30px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #000000;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #000000;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.card-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card-btn:hover {
+    background-color: #333333;
+}
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">LamanKami.</div>
+        <ul class="nav-links">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-wrapper">
+        <div class="card-container">
+            <div class="card">
+                <div class="avatar-placeholder"></div>
+                <h3>Andi Pratama</h3>
+                <p>Pengembang Web</p>
+                <button class="card-btn">Profil</button>
+            </div>
+
+            <div class="card">
+                <div class="avatar-placeholder"></div>
+                <h3>Budi Santoso</h3>
+                <p>Desainer UI/UX</p>
+                <button class="card-btn">Profil</button>
+            </div>
+
+            <div class="card">
+                <div class="avatar-placeholder"></div>
+                <h3>Citra Dewi</h3>
+                <p>Ilmuwan Data</p>
+                <button class="card-btn">Profil</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
