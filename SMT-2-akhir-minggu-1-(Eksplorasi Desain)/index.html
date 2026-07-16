@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResikExpress — Laundry Minimalis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigasi */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 5%;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #111111;
+        }
+
+        .logo span {
+            color: #15803d;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #666666;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #15803d;
+        }
+
+        /* Tombol kontak */
+        .btn-nav {
+            background-color: #111111;
+            color: #ffffff !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .btn-nav:hover {
+            background-color: #15803d;
+        }
+
+        /* Hero */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 5%;
+            gap: 3rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 540px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #dcfce7;
+            color: #166534;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #111111;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            color: #444444;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        /* Tombol aksi */
+        .btn-primary, .btn-secondary {
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .btn-primary {
+            background-color: #15803d;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #166534;
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #111111;
+            border: 1px solid #111111;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Panel fitur */
+        .hero-image-placeholder {
+            flex: 1;
+            height: 350px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .visual-card-laundry {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+            width: 240px;
+        }
+
+        .visual-card-laundry .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .visual-card-laundry h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #111111;
+        }
+
+        .visual-card-laundry p {
+            font-size: 0.85rem;
+            color: #666666;
+        }
+
+        /* Layanan */
+        .services {
+            padding: 5rem 5%;
+            background-color: #fafafa;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .section-title {
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #111111;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: #666666;
+            font-size: 0.95rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 4px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .card:hover {
+            border-color: #15803d;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #111111;
+        }
+
+        .card p {
+            color: #444444;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #15803d;
+            font-size: 1rem;
+        }
+
+        .footer {
+            background-color: #111111;
+            color: #f4f4f4;
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            border-top: 1px solid #2f2f2f;
+        }
+
+        .footer .footer-brand {
+            max-width: 320px;
+        }
+
+        .footer h4 {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .footer p,
+        .footer a,
+        .footer li {
+            color: #d1d5db;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .footer a {
+            color: #a7f3d0;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li:not(:last-child) {
+            margin-bottom: 0.75rem;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero {
+                flex-direction: column;
+                padding: 3rem 5%;
+                text-align: center;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .hero-image-placeholder {
+                width: 100%;
+                height: 280px;
+            }
+            .footer {
+                flex-direction: column;
+                padding: 2rem 5%;
+            }
+            .footer-links {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Resik<span>Express</span></div>
+        <nav class="nav-links">
+            <a href="#" class="active">Beranda</a>
+            <a href="#layanan">Layanan</a>
+            <a href="https://wa.me/6282199970549" target="_blank" class="btn-nav">Pesan Sekarang</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">Laundry Premium</span>
+                <h1>Pakaian Bersih, Rapi, & Harum Tanpa Ribet</h1>
+                <p>Kesibukan Anda berharga. Biarkan kami yang mengurus pakaian kotor Anda dengan teknologi cuci modern dan layanan tepat waktu.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/6282199970549" target="_blank" class="btn-primary">Hubungi WhatsApp</a>
+                    <a href="#layanan" class="btn-secondary">Lihat Layanan</a>
+                </div>
+            </div>
+            <div class="hero-image-placeholder">
+                <div class="visual-card-laundry">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M7 4h10l1 2H6l1-2zm12 3H5c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 13H5V9h14v11z"/>
+                        </svg>
+                    </span>
+                    <h4>Selesai Tepat Waktu</h4>
+                    <p>Garansi 1 Hari Selesai</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="layanan" class="services">
+            <div class="section-title">
+                <h2>Layanan Terbaik Kami</h2>
+                <p>Pilih paket laundry yang sesuai dengan kebutuhan pakaian Anda.</p>
+            </div>
+            
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M6 4h12v2H6V4zm0 4h12v2H6V8zm0 4h12v2H6v-2zm0 4h12v2H6v-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Cuci Komplit (Kiloan)</h3>
+                    <p>Layanan cuci, kering, dan setrika rapi menggunakan parfum premium. Cocok untuk pakaian sehari-hari.</p>
+                    <span class="price">Mulai Rp 8.000 / kg</span>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M12 2l3 4h-6l3-4zm7 5h-2.5l-1-3H8.5l-1 3H5c-1.1 0-2 .9-2 2v5c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM7 16v-5h10v5H7z"/>
+                        </svg>
+                    </div>
+                    <h3>Setrika Exclusive</h3>
+                    <p>Hanya layanan setrika uap presisi untuk kemeja, jas, atau gaun agar bebas kusut dan siap pakai.</p>
+                    <span class="price">Mulai Rp 5.000 / pcs</span>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" aria-hidden="true" focusable="false">
+                            <path fill="currentColor" d="M4 7h16v2H4V7zm0 4h16v8H4v-8zm2 2v4h12v-4H6z"/>
+                        </svg>
+                    </div>
+                    <h3>Bedding & Linen</h3>
+                    <p>Cuci khusus untuk bedcover, selimut, gorden, dan sprei dengan formula khusus bersih menyeluruh.</p>
+                    <span class="price">Mulai Rp 25.000 / pcs</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-brand">
+            <h4>ResikExpress</h4>
+            <p>Laundry minimalis dengan layanan antar jemput, cuci komplit, setrika premium, dan perawatan linen. Cepat, bersih, dan wangi.</p>
+            <p>Hubungi: <a href="https://wa.me/6282199970549" target="_blank">+62 821-9997-0549</a></p>
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><strong>Layanan</strong></li>
+                <li>Cuci Komplit</li>
+                <li>Setrika Exclusive</li>
+                <li>Bedding & Linen</li>
+            </ul>
+            <ul>
+                <li><strong>Info</strong></li>
+                <li><a href="#layanan">Lihat Paket</a></li>
+                <li><a href="#">Syarat & Ketentuan</a></li>
+                <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
