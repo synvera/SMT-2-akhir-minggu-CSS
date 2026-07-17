@@ -1,0 +1,17 @@
+      PROGRESS PROGRESS WEBSITE - SYNVERA LAUNDRY
+      
+      1. FITUR YANG SUDAH SELESAI (DONE):
+         - Sticky Navbar & Navigation Link (Home, Layanan, Kontak)
+         - Hero Section (Headline, Sub-headline, & Button CTA dengan Efek Hover)
+         - Services Card (Layout 3 kolom responsif untuk Cuci Kiloan, Satuan, Bedding)
+         - Contact Info Section (Informasi Alamat, WhatsApp, Email, & Jam Operasional)
+         - Footer Website (Hak Cipta)
+         - Media Queries / Desain Responsif (Aman & rapi saat dibuka di layar HP < 600px)
+
+      2. FITUR YANG SEDANG DIKERJAKAN (IN PROGRESS):
+         - Menghubungkan Anchor Links (agar menu Navbar bisa scroll otomatis saat diklik)
+         - Integrasi Direct link ke WhatsApp API pada tombol "Pesan Sekarang"
+
+      3. FITUR YANG BELUM SELESAI (TO-DO):
+         - Memasukkan aset gambar visual/ikon asli bertema laundry pada Hero & Cards
+         - Optimasi transisi animasi halus saat halaman di-scroll
