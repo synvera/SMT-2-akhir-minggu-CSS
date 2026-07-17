@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Laundry</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #191a19;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 2px solid #d1e7dd;
+            padding: 20px;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+            color: #191a19;
+            text-decoration: none;
+        }
+
+        .logo span {
+            background-color: #d1e7dd;
+            padding: 2px 8px;
+        }
+
+        .nav-links {
+            float: right;
+            margin-top: 5px;
+        }
+
+        .nav-links a {
+            color: #191a19;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #a3cfbb;
+        }
+
+        .navbar::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .hero {
+            background-color: #d1e7dd;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: #191a19;
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+
+        .btn-cta:hover {
+            background-color: #333333;
+        }
+
+        .features {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .features-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+        .grid-features {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #d1e7dd;
+            padding: 30px;
+            width: 31%;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .card:hover {
+            background-color: #d1e7dd;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #191a19;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bold;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+
+        .testimonials {
+            padding: 80px 20px;
+            background-color: #f8f9fa;
+        }
+
+        .grid-testimonials {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testi-card {
+            background-color: #ffffff;
+            border-left: 5px solid #d1e7dd;
+            padding: 25px;
+            width: 48%;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .testi-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .testi-user {
+            font-weight: bold;
+            font-size: 14px;
+            color: #191a19;
+        }
+
+        .footer {
+            background-color: #191a19;
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            float: left;
+            font-weight: bold;
+        }
+
+        .footer-logo span {
+            color: #d1e7dd;
+        }
+
+        .footer p {
+            float: right;
+            font-size: 14px;
+        }
+
+        .footer::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media (max-width: 768px) {
+            .logo, .nav-links, .card, .gallery-item, .testi-card, .footer-logo, .footer p {
+                float: none;
+                width: 100% !important;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .grid-features, .grid-gallery, .grid-testimonials {
+                display: block;
+            }
+            .nav-links a {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Synvera</a>
+            <div class="nav-links">
+                <a href="#">Beranda</a>
+                <a href="#layanan">Layanan</a>
+                <a href="#galeri">Galeri</a>
+                <a href="#testimoni">Testimoni</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Pakaian Bersih, Pikiran Tenang</h1>
+            <p>Kami merawat pakaian Anda dengan kelembutan ekstra. Bersih maksimal, wangi segar tahan lama, dan rapi siap pakai tanpa repot.</p>
+            <a href="#layanan" class="btn-cta">Pesan Antar Sekarang</a>
+        </div>
+    </section>
+
+    <section class="features" id="layanan">
+        <div class="features-container">
+            <h2 class="section-title">Layanan Terbaik Kami</h2>
+            
+            <div class="grid-features">
+                <div class="card">
+                    <div class="card-icon">K</div>
+                    <h3>Cuci Kiloan</h3>
+                    <p>Solusi praktis harian untuk pakaian kasual. Dicuci bersih, dikeringkan, dan disetrika dengan rapi.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">S</div>
+                    <h3>Cuci Satuan</h3>
+                    <p>Perawatan khusus untuk jas, gaun, jaket kulit, dan pakaian berbahan sensitif milik Anda.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">E</div>
+                    <h3>Ekspres 6 Jam</h3>
+                    <p>Butuh pakaian siap pakai dalam waktu singkat? Layanan kilat kami siap membantu hari Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimoni">
+        <div class="features-container">
+            <h2 class="section-title">Apa Kata Mereka?</h2>
+            
+            <div class="grid-testimonials">
+                <div class="testi-card">
+                    <p class="testi-text">"Wangi laundry-nya enak banget, lembut dan gak bikin pusing kayak teh hijau segar. Hasil setrikanya juga rapi parah, gak ada lipatan kusut sama sekali."</p>
+                    <p class="testi-user">— Intan P., Pelanggan Setia</p>
+                </div>
+
+                <div class="testi-card">
+                    <p class="testi-text">"Suka banget sama layanan ekspresnya. Pas ada acara mendadak, baju kerja selesai tepat waktu dalam 6 jam. Sangat menyelamatkan!"</p>
+                    <p class="testi-user">— Budi Hartono, Karyawan Swasta</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">Synvera</div>
+            <p>&copy; 2026 Synvera Laundry. Bersih, Wangi, Tenang.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
